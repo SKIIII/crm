@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-)65cffr0mkv&9faxj%hs$tje!6w7v!d#8s_@x4u7-kcot8n6io
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.0.102', 'ge3vvy.natappfree.cc']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-pwq8-1593133-1309458132.ap-shanghai.run.tcloudbase.com']
 
 # Application definition
 
@@ -73,11 +73,23 @@ WSGI_APPLICATION = 'crm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  'default': {
+      'ENGINE': 'django.db.backends.mysql',
+      'NAME': 'crm',   # 数据库名
+      'USER': 'root',    # 数据库 用户名
+      'PASSWORD': 'Whaoliai42',# 数据库 用户密码
+      'HOST': 'sh-cynosdbmysql-grp-q01uzfx4.sql.tencentcdb.com', # 数据库服务主机名
+      'PORT': '23850',      # 数据库服务端口
+      'CONN_MAX_AGE': 0
+  }
 }
 
 # Password validation
